@@ -1,0 +1,214 @@
+:root {
+    --nnaco-primary: #0f172a; /* Corporate Slate 900 */
+    --nnaco-secondary: #f8fafc; /* Corporate Slate 50 Body */
+    --nnaco-accent: #774dd3; /* Corporate Primary Purple */
+    --nnaco-text: #1e293b; /* Corporate Slate 800 */
+    --nnaco-light: #ffffff;
+    --nnaco-gray: #64748b; /* Corporate Slate 500 */
+    --nnaco-border: #e2e8f0; /* Corporate Border */
+}
+
+body {
+    font-family: 'Open Sans', 'Noto Sans', sans-serif;
+    background-color: var(--nnaco-secondary);
+    color: var(--nnaco-text);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Typography Enhancements */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--nnaco-primary);
+    letter-spacing: -0.01em;
+}
+
+/* Custom Components & Utilities */
+.bg-nnaco-primary { background-color: var(--nnaco-primary) !important; }
+.text-nnaco-primary { color: var(--nnaco-primary) !important; }
+.text-nnaco-accent { color: var(--nnaco-accent) !important; }
+
+/* Product Cards (Corporate UI Dashboard Laravel Style) */
+.card-product {
+    background: #ffffff;
+    border: 1px solid var(--nnaco-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: transform 0.25s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.25s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+.card-product:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.1) !important;
+    border-color: #cbd5e1;
+}
+
+.card-product .card-img-top {
+    height: 240px;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.card-product:hover .card-img-top {
+    transform: scale(1.03);
+}
+
+/* Buttons (Corporate UI) */
+.btn-nnaco {
+    background-color: var(--nnaco-primary);
+    color: #ffffff;
+    border: 1px solid var(--nnaco-primary);
+    border-radius: 8px;
+    padding: 0.55rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-nnaco:hover {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.2);
+}
+
+.btn-nnaco-outline {
+    background-color: transparent;
+    color: var(--nnaco-primary);
+    border: 1px solid var(--nnaco-border);
+    border-radius: 8px;
+    padding: 0.55rem 1.25rem;
+    font-weight: 600;
+    font-size: 0.875rem;
+    transition: all 0.2s ease;
+}
+
+.btn-nnaco-outline:hover {
+    background-color: #ffffff;
+    border-color: #cbd5e1;
+    color: var(--nnaco-primary);
+}
+
+/* Badges */
+.badge-premium {
+    background-color: var(--nnaco-accent);
+    color: white;
+    font-weight: 600;
+    padding: 0.35rem 0.65rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}
+
+/* Tables (Corporate UI) */
+.table-nnaco {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.table-nnaco th {
+    background-color: #f8fafc !important;
+    color: var(--nnaco-gray) !important;
+    font-weight: 700 !important;
+    font-size: 0.72rem !important;
+    text-transform: uppercase !important;
+    letter-spacing: 0.5px !important;
+    border-bottom: 1px solid var(--nnaco-border) !important;
+    padding: 0.85rem 1.25rem !important;
+}
+
+.table-nnaco td {
+    padding: 1rem 1.25rem !important;
+    vertical-align: middle !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    font-size: 0.875rem !important;
+    color: var(--nnaco-text);
+}
+
+/* Forms (Corporate UI Inputs) */
+.form-control-nnaco {
+    border: 1px solid var(--nnaco-border);
+    border-radius: 8px;
+    padding: 0.55rem 0.95rem;
+    font-size: 0.875rem;
+    background-color: #ffffff;
+    transition: all 0.2s ease;
+}
+
+.form-control-nnaco:focus {
+    border-color: var(--nnaco-primary);
+    box-shadow: 0 0 0 3px rgba(15, 23, 42, 0.08);
+}
+
+/* Admin/Dashboard Cards */
+.card-stat {
+    border: 1px solid var(--nnaco-border);
+    border-radius: 16px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.card-stat:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(15, 23, 42, 0.08);
+}
+
+/* AI Chatbot Markdown Table & Responsive Formatting */
+.chat-table-container {
+    border: 1px solid #e2e8f0;
+    border-radius: 10px;
+    background: #ffffff;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.chat-table-container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.chat-table-container::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 4px;
+}
+
+.chat-table-container::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 4px;
+}
+
+.chat-table-container::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+.chat-table {
+    margin-bottom: 0 !important;
+    font-size: 0.8rem;
+    white-space: nowrap;
+}
+
+.chat-table thead th {
+    background: #f8fafc !important;
+    color: #475569 !important;
+    font-weight: 700;
+    font-size: 0.72rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 2px solid #e2e8f0 !important;
+    padding: 0.6rem 0.8rem !important;
+}
+
+.chat-table tbody td {
+    padding: 0.55rem 0.8rem !important;
+    border-bottom: 1px solid #f1f5f9 !important;
+    color: #1e293b;
+    vertical-align: middle;
+}
+
+.chat-table tbody tr:last-child td {
+    border-bottom: none !important;
+}
+
+.chat-table tbody tr:hover td {
+    background-color: #f8fafc !important;
+}

@@ -1,0 +1,37 @@
+# Environment files - JANGAN pernah commit file ini
+.env
+.env.*
+!.env.example
+groq-chat-server/.env
+groq-chat-server/.env.*
+!groq-chat-server/.env.example
+
+# Node modules & dependencies
+node_modules/
+*/node_modules/
+vendor/
+
+# Database binary backups
+database/nnaco_sa_db_backup_original/
+*.ibd
+*.frm
+
+# Temporary & Scratch files
+scratch/
+test_cookie.txt
+*.log
+logs/
+
+# Uploads
+public/uploads/*.jpg
+public/uploads/*.jpeg
+public/uploads/*.png
+public/uploads/*.gif
+public/uploads/*.webp
+!public/uploads/.gitkeep
+
+# OS files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
